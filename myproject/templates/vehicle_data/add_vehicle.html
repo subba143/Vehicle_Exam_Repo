@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--{% load static %}-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Vehicle</title>
+<!--    <link href="{% static 'css/style.css' %}"rel="stylesheet">-->
+
+</head>
+<body>
+<div align="center">
+<h2> TATA MOTORS MANUFACTURING <br><img src="{% static 'images/tata-thumb-1-660x425.jpg' %}"></h2>
+</div>
+<div align="center">
+    <h2>Book Vehicle</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="vin">VIN:</label><br>
+        <input type="text" id="vin" name="vin"><br>
+        <label for="make">Make:</label><br>
+        <input type="text" id="make" name="make"><br>
+        <label for="model">Model:</label><br>
+        <input type="text" id="model" name="model"><br>
+        <label for="year">Year:</label><br>
+        <input type="number" id="year" name="year"><br>
+        <label for="color">Color:</label><br>
+        <input type="text" id="color" name="color"><br>
+        <label for="mileage">Mileage:</label><br>
+        <input type="number" id="mileage" name="mileage"><br>
+        <label for="v_type">Type:</label><br>
+        <input type="text" id="v_type" name="v_type"><br>
+        <label for="seats">Seats:</label><br>
+        <input type="number" id="seats" name="seats"><br>
+        <label for="v_seat_type">Seat Type:</label><br>
+        <input type="text" id="v_seat_type" name="v_seat_type"><br>
+        <label for="owner">Owner:</label><br>
+        <input type="text" id="owner" name="owner"><br>
+        <label for="o_contact">Contact:</label><br>
+        <input type="text" id="o_contact" name="o_contact"><br>
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

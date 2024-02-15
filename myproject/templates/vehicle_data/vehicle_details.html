@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Details</title>
+    <link href="{% static 'css/style.css' %}"rel="stylesheet">
+</head>
+<body>
+<h2><img src="{% static 'images/tata-thumb-1-660x425.jpg' %}"> MANUFACTURING </h2>
+<div align="center">
+    <h1>Vehicle Details</h1>
+    <ul>
+        <li>VIN: {{ vehicle.vin }}</li>
+        <li>Make: {{ vehicle.make }}</li>
+        <li>Model: {{ vehicle.model }}</li>
+        <li>Year: {{ vehicle.year }}</li>
+        <li>Color: {{ vehicle.color }}</li>
+        <li>Mileage: {{ vehicle.mileage }}</li>
+        <li>Type: {{ vehicle.v_type }}</li>
+        <li>Seats: {{ vehicle.seats }}</li>
+        <li>Seat Type: {{ vehicle.v_seat_type }}</li>
+        <li>Owner: {{ vehicle.owner.username }}</li>
+        <li>Contact: {{ vehicle.o_contact }}</li>
+        <li>Feedback: {{ vehicle.feedback }}</li>
+    </ul>
+</div>
+</body>
+</html>
